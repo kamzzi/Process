@@ -1,9 +1,4 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+body {
   font-family: sans-serif;
   color: #444;
 }
@@ -73,6 +68,10 @@ li:first-child {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
+}
+
+nav {
+  font-size: 18px;
 }
 
 a:link,
