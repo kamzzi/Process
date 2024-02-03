@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -100,13 +101,13 @@ li:first-child {
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 .primary-header {
   background-color: #f7f7f7;
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
 }
 
 .post-header {
@@ -117,8 +118,7 @@ li:first-child {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
 }
 
 nav {
@@ -153,4 +153,38 @@ article {
   position: absolute;
   bottom: 50px;
   right: 50px;
+}
+
+.author-image {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  margin-left: 20px;
+  margin-top: 10px;
+  float: left;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+article {
+  width: 825px;
+  float: left;
+}
+.posts {
+  width: 300px;
+  float: right;
 }
