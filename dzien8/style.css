@@ -16,7 +16,12 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
+  --main-color: #087f5b;
+  --text-color: #343a40;
+
+  color: var(--text-color);
   font-family: "Inter", sans-serif;
+  border-bottom: 8px solid var(--main-color);
 }
 
 .container {
@@ -76,6 +81,10 @@ img {
 
 /* FEATURES */
 .features-icon {
+  stroke: var(--main-color);
+  width: 32px;
+  height: 32px;
+  margin-bottom: 16px;
 }
 
 .features-title {
@@ -90,6 +99,9 @@ img {
 
 /* TESTIMONIAL */
 .testimonial-section {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 24px;
 }
 
 .testimonial-box {
@@ -110,6 +122,10 @@ img {
 }
 
 /* CHAIRS */
+.chair {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
 .chair-box {
   padding: 24px;
 }
@@ -136,6 +152,9 @@ h3 {
 }
 
 .chair-icon {
+  stroke: var(--main-color);
+  width: 24px;
+  height: 24px;
 }
 
 .chair-price {
@@ -147,4 +166,28 @@ h3 {
 footer {
   margin-bottom: 48px;
   font-size: 13.33px;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn--big {
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+.btn--small {
+  font-size: 13.33px;
+  padding: 8px 12px;
+}
+
+.btn:hover {
+  background-color: #099268;
 }
