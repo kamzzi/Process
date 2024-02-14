@@ -21,3 +21,7 @@
 .grid-center {
   place-items: center;
 }
+
+.u-margin-bottom-md {
+  margin-bottom: 4.8rem;
+}
