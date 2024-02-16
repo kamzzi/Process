@@ -357,3 +357,7 @@ body {
 .gallery__item:hover .gallery__image {
   transform: scale(1.1);
 }
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
