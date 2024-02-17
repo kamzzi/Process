@@ -361,3 +361,71 @@ body {
 .section-pricing {
   padding: 9.6rem 0;
 }
+
+.pricing__plan {
+  border: 2px solid var(--color-secondary);
+  padding: 4.8rem;
+  width: 75%;
+  border-radius: 11px;
+}
+
+.pricing__plan--starter {
+  justify-self: end;
+}
+
+.pricing__plan--complete {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+}
+
+.pricing__plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #ffd43b;
+  padding: 0.84rem 8rem;
+  color: var(--color-dark-gray);
+  transform: rotate(45deg);
+}
+
+.plan__header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan__title {
+  color: var(--color-darker-primary);
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 3.2rem;
+}
+
+.plan__price {
+  font-size: 7.4rem;
+  font-weight: 600;
+  color: var(--color-dark-gray);
+  margin-bottom: 1.6rem;
+}
+
+.plan__value {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan__text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan__action {
+  margin-top: 4.8rem;
+}
