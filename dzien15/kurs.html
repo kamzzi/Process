@@ -31,20 +31,22 @@
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="link link--navigation"> How it works </a>
+            <a href="#how" class="link link--navigation"> How it works </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="link link--navigation"> Meals </a>
+            <a href="#meals" class="link link--navigation"> Meals </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="link link--navigation"> Testimonials </a>
+            <a href="#testimonials" class="link link--navigation">
+              Testimonials
+            </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="link link--navigation"> Pricing </a>
+            <a href="#pricing" class="link link--navigation"> Pricing </a>
           </li>
           <li class="navigation__item">
             <a
-              href="#"
+              href="#cta"
               class="link link--general link--cta link--navigation-cta"
             >
               Try for free
@@ -52,6 +54,38 @@
           </li>
         </ul>
       </nav>
+      <button class="btn--hamburger">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn--icon"
+          name="open"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn--icon"
+          name="close"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
     </header>
     <main>
       <section class="section-hero">
@@ -159,7 +193,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="how">
           <div class="wrapper">
             <p class="subtitle">How it works</p>
@@ -225,7 +259,7 @@
         </div>
       </section>
 
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="meals">
           <div class="wrapper center">
             <p class="subtitle">Meals</p>
@@ -557,7 +591,7 @@
           </div>
         </div>
       </section>
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
           <p class="subtitle">Testimonials</p>
           <h2 class="heading__secondary">Once you try it, you can't go back</h2>
@@ -700,7 +734,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="wrapper">
           <p class="subtitle">Pricing</p>
           <h2 class="heading__secondary">
@@ -978,7 +1012,7 @@
           </div>
         </div>
       </section>
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="wrapper">
           <div class="cta">
             <div class="cta__content">
@@ -1170,5 +1204,6 @@
         </nav>
       </div>
     </footer>
+    <script src="./app.js"></script>
   </body>
 </html>
