@@ -1,0 +1,78 @@
+@use "./../abstracts/variables" as *;
+
+.link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+  }
+  &--primary {
+    &:link,
+    &:visited {
+      position: relative;
+      text-transform: uppercase;
+      padding: 1.5rem 4rem;
+      border-radius: 10rem;
+      transition: 0.3s;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10rem;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transition: 0.3s;
+      }
+    }
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+  }
+  &--white {
+    &:link,
+    &:visited {
+      background-color: #fff;
+      color: #777;
+      &::after {
+        background-color: #fff;
+      }
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  }
+
+  &--animated {
+    &:link,
+    &:visited {
+      animation: showFromBottom 1s ease-out;
+    }
+  }
+}
+
+@keyframes showFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

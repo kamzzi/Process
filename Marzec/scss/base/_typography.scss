@@ -1,0 +1,56 @@
+@use "./../abstracts/variables" as *;
+
+.heading__primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  &-top {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: showFromLeft 1s ease-out;
+  }
+  &-bottom {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: showFromRight 1s ease-out;
+  }
+}
+
+@keyframes showFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes showFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
