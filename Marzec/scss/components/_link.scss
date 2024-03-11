@@ -6,6 +6,28 @@
     display: inline-block;
     text-decoration: none;
   }
+
+  &--secondary {
+    &:link,
+    &:visited {
+      color: $color-primary;
+      border-bottom: 1px solid $color-primary;
+      padding: 3px;
+      font-size: 1.6rem;
+      transition: 0.3s;
+    }
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+      transform: translateY(-2px);
+    }
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+      transform: translateY(0);
+    }
+  }
+
   &--primary {
     &:link,
     &:visited {
