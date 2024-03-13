@@ -74,6 +74,23 @@
     }
   }
 
+  &--green {
+    &:link,
+    &:visited {
+      background-color: $color-primary;
+      color: $color-white;
+      &::after {
+        background-color: $color-primary;
+      }
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  }
+
   &--animated {
     &:link,
     &:visited {
