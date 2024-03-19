@@ -1,13 +1,23 @@
 @use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
 
 .footer {
   background-color: #333;
   color: $color-gray-light-1;
   padding: 10rem 0;
   font-size: 1.4rem;
+
+  @include media(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include media(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -29,6 +39,11 @@
     border-top: 1px solid #eee;
     padding-top: 2rem;
     width: fit-content;
+
+    @include media(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__copyright {
@@ -36,6 +51,10 @@
     padding-top: 2rem;
     float: right;
     width: 80%;
+    @include media(tab-port) {
+      width: 100%;
+      float: none;
+    }
   }
 
   &__link {

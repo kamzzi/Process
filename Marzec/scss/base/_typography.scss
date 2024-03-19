@@ -1,4 +1,5 @@
 @use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
 
 .heading__primary {
   color: $color-white;
@@ -11,6 +12,10 @@
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: showFromLeft 1s ease-out;
+    @include media(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   &-bottom {
     display: block;
@@ -18,6 +23,9 @@
     font-weight: 700;
     letter-spacing: 1.74rem;
     animation: showFromRight 1s ease-out;
+    @include media(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -41,6 +49,14 @@
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  @include media(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include media(phone) {
+    font-size: 2.5rem;
   }
 }
 
