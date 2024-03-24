@@ -9,6 +9,11 @@
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Nunito", sans-serif;
@@ -21,6 +26,17 @@ body {
   display: grid;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+}
+@media only screen and (max-width: 62.5em) {
+  .container {
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+  }
+}
+@media only screen and (max-width: 50em) {
+  .container {
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
 }
 
 .heading {
@@ -97,6 +113,14 @@ body {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 62.5em) {
+  .sidebar {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
 
 .button-nav {
   border: none;
@@ -116,8 +140,24 @@ body {
 .button-nav::before {
   transform: translateY(-1.5rem);
 }
+@media only screen and (max-width: 62.5em) {
+  .button-nav::before {
+    transform: translateY(-1.5rem);
+  }
+}
 .button-nav::after {
-  transform: translateY(1.5rem);
+  transform: translateY(1.2rem);
+}
+@media only screen and (max-width: 62.5em) {
+  .button-nav::after {
+    transform: translateY(-1rem);
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .button-nav {
+    margin-top: 0;
+    margin-right: 3rem;
+  }
 }
 
 .header {
@@ -127,12 +167,22 @@ body {
   background-size: cover;
   background-position: center;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
   grid-template-columns: minmax(min-content, max-content);
   justify-content: center;
   row-gap: 1.5rem;
   padding: 8rem;
   padding-top: 4rem;
+}
+@media only screen and (max-width: 50em) {
+  .header {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    padding: 5rem;
+  }
 }
 .header__logo {
   height: 3rem;
@@ -157,9 +207,11 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   justify-items: center;
+  align-items: center;
 }
 .header .logo {
-  height: 2.5rem;
+  max-height: 2.5rem;
+  max-width: 100%;
   filter: brightness(70%);
 }
 .header__btn {
@@ -177,12 +229,27 @@ body {
   row-gap: 2rem;
   justify-items: center;
 }
+@media only screen and (max-width: 50em) {
+  .realtors {
+    grid-column: 1/-1;
+  }
+}
 .realtors__list {
   display: grid;
   grid-template-columns: min-content max-content;
   column-gap: 2rem;
   row-gap: 5vh;
   align-items: center;
+}
+@media only screen and (max-width: 50em) {
+  .realtors__list {
+    grid-template-columns: repeat(3, min-content max-content);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .realtors__list {
+    grid-template-columns: min-content max-content;
+  }
 }
 .realtors__image {
   width: 7rem;
@@ -228,6 +295,13 @@ body {
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
   background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
+  background-size: cover;
+}
+@media only screen and (max-width: 50em) {
+  .story__pictures {
+    grid-column: 1/-1;
+    padding: 6rem;
+  }
 }
 .story__picture--1 {
   width: 100%;
@@ -235,12 +309,25 @@ body {
   grid-column: 2/6;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 50em) {
+  .story__picture--1 {
+    grid-column: 1/4;
+    grid-row: 1/-1;
+  }
+}
 .story__picture--2 {
   width: 115%;
   grid-row: 4/6;
   grid-column: 4/7;
-  z-index: 1;
+  z-index: 22;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 50em) {
+  .story__picture--2 {
+    grid-row: 1/-1;
+    grid-column: 3/6;
+    width: 100%;
+  }
 }
 .story__content {
   background-color: #f9f7f6;
@@ -250,6 +337,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media only screen and (max-width: 50em) {
+  .story__content {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
 }
 .story__text {
   font-size: 1.5rem;
